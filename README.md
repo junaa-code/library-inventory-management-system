@@ -1,9 +1,5 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects. Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
 # 📚 Library Inventory Management System
 
 ### 📘 Description / Overview
@@ -61,19 +57,20 @@ The **Library Inventory Management System** is a web-based application developed
 
 ## 💡 Usage
 
--Navigate to the Books, Members, or Transactions sections.
--Add new books, register members, or record borrow/return transactions.
--Search books for quick access.
--View inventory and transaction 
+- Navigate to the Books, Members, or Transactions sections.
+- Add new books, register members, or record borrow/return transactions.
+- Search books for quick access.
+- View inventory and transaction 
 
 Example: Adding a New Book
+```bash
 Book::create([
-    'title' => 'To Kill a Mockingbird',
-    'author' => 'Harper Lee',
+    'title' => 'Noli Me Tángere',
+    'author' => 'José Rizal',
     'isbn' => '9780060935467',
     'quantity' => 3
 ]);
-
+```
 ---
 
 ## 🖼️ Screenshots or Code Snippets
@@ -123,8 +120,8 @@ Add New Member Form:
 ---
 
 ## 👩‍💻 Contributors
--Jonalyn Estipular
--Bachelor of Science in Information Technology
+- Jonalyn Estipular
+- Bachelor of Science in Information Technology
 
 ---
 
