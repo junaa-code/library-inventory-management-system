@@ -2,22 +2,11 @@
 
 ## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects. Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Security Vulnerabilities
 # 📚 Library Inventory Management System
 
-## 📘 Description / Overview
+### 📘 Description / Overview
 
 The **Library Inventory Management System** is a web-based application developed using **Laravel MVC framework**. It is designed to help librarians efficiently manage books, track transactions, and monitor inventory in real-time. This system simplifies library operations, reduces manual errors, and provides a user-friendly interface for library staff to maintain records of books, borrowers, and transactions.
 
@@ -27,30 +16,120 @@ The **Library Inventory Management System** is a web-based application developed
 
 - To create a simple and intuitive system for library management.
 - To implement **CRUD (Create, Read, Update, Delete)** operations for books, members, and transactions using Laravel.
-- To demonstrate relational database integration and use **Eloquent ORM** for data handling.
+- To demonstrate relational database integration and data handling.
 - To apply web development best practices for interface design and functionality.
 
 ---
 
 ## 🛠️ Features / Functionality
 
-- Add, edit, and delete books and members.
+- Add, edit, and delete books, members, and transaction.
 - Track book borrowing and returning transactions.
-- Search and filter books or members.
-- Generate reports on inventory and transactions.
+- Search and books.
+- View on inventory and transactions.
 - User-friendly interface with responsive design.
 
 ---
 
 ## 💻 Installation Instructions
-
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/library-inventory-system.git
+   git clone https://github.com/yourusername/inventory-management-system.git
+   ```
+2. **Navigate to the project folder:**
+   ```bash
+   cd inventory-management-system
+   ```
+3. **Install dependencies(if using laravel):**
+   ```bash
+   composer install
+   ```
+4. **Run migrations to create database tables:**
+   ```bash
+   php artisan migrate
+   ```
+5. **Start your local server:**
+   ```bash
+   php artisan serve
+   ```
+6. **Open your browser and go to:**
+    ```bash
+    http://127.0.0.1:8000
+    ```
 
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 💡 Usage
 
-## License
+-Navigate to the Books, Members, or Transactions sections.
+-Add new books, register members, or record borrow/return transactions.
+-Search books for quick access.
+-View inventory and transaction 
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Example: Adding a New Book
+Book::create([
+    'title' => 'To Kill a Mockingbird',
+    'author' => 'Harper Lee',
+    'isbn' => '9780060935467',
+    'quantity' => 3
+]);
+
+---
+
+## 🖼️ Screenshots or Code Snippets
+Add New Member Form:
+```bash
+@extends('layouts.app')
+
+@section('content')
+<h2 class="fw-bold mb-4">👥 Borrower List</h2>
+
+<a href="{{ route('borrowers.create') }}" class="btn btn-success mb-3">Register New Borrower</a>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @forelse ($borrowers as $borrower)
+        <tr>
+            <td>{{ $borrower->id }}</td>
+            <td>{{ $borrower->name }}</td>
+            <td>{{ $borrower->email }}</td>
+            <td>{{ $borrower->phone }}</td>
+            <td>
+                <a href="{{ route('borrowers.show', $borrower->id) }}" class="btn btn-info btn-sm">View</a>
+                <a href="{{ route('borrowers.edit', $borrower->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                <form action="{{ route('borrowers.destroy', $borrower->id) }}" method="POST" class="d-inline">
+                    @csrf @method('DELETE')
+                    <button class="btn btn-danger btn-sm" onclick="return confirm('Delete borrower?')">Delete</button>
+                </form>
+            </td>
+        </tr>
+        @empty
+        <tr><td colspan="5" class="text-center text-muted">No borrowers found.</td></tr>
+        @endforelse
+    </tbody>
+</table>
+@endsection
+```
+
+---
+
+## 👩‍💻 Contributors
+-Jonalyn Estipular
+-Bachelor of Science in Information Technology
+
+---
+
+## ⚖️ License
+
+This project is free to use for educational and personal purposes.
+You may copy, modify, and share it as long as proper credit is given.
+© 2025 Jonalyn Estipular — All rights reserved.
