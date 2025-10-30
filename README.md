@@ -51,6 +51,40 @@ Thank you for considering contributing to the Laravel framework! The contributio
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
 ## Security Vulnerabilities
+# 📚 Library Inventory Management System
+
+## 📘 Description / Overview
+
+The **Library Inventory Management System (LIMS)** is a web-based application developed to efficiently manage books, members, and library transactions.  
+It allows librarians to track book inventory, manage borrowing and returning of books, and maintain organized records with ease.
+
+---
+
+## 🎯 Objectives
+
+- To create a simple and intuitive system for library management.
+- To implement **CRUD (Create, Read, Update, Delete)** operations for books, members, and transactions using Laravel.
+- To demonstrate relational database integration and use **Eloquent ORM** for data handling.
+- To apply web development best practices for interface design and functionality.
+
+---
+
+## ⚙️ Features / Functionality
+
+- Add, edit, and delete books and members.
+- Track book borrowing and returning transactions.
+- Search and filter books or members.
+- Generate reports on inventory and transactions.
+- User-friendly interface with responsive design.
+
+---
+
+## 🖥️ Installation Instructions
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/library-inventory-system.git
+
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
