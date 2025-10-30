@@ -127,6 +127,7 @@ Register New Member Form:
 
 ## ⚖️ License
 
-This project is free to use for educational and personal purposes.
-You may copy, modify, and share it as long as proper credit is given.
-© 2025 Jonalyn Estipular — All rights reserved.
+This project is intended for educational and personal learning purposes.  
+Feel free to explore, improve, or adapt the code while acknowledging the original creator.  
+© 2025 Jonalyn Estipular —  Developed as part of an academic project. 
+All rights reserved.
