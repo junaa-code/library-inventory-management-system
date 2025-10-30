@@ -74,7 +74,7 @@ Book::create([
 ---
 
 ## 🖼️ Screenshots or Code Snippets
-Add New Member Form:
+Register New Member Form:
 ```bash
 @extends('layouts.app')
 
